@@ -23,7 +23,7 @@ if (!videoId) {
 } else {
   async function load() {
     try {
-      // 外部動画URL取得APIにアクセス
+      // 外部動画URL取得APIにアクセス（プロキシ経由）
       const res = await fetch(`/proxy?url=${encodeURIComponent('https://teaching-materials-r4zf.onrender.com/video?id=' + videoId)}`);
       const data = await res.json();
 
